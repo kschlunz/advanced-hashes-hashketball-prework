@@ -266,20 +266,20 @@ def big_shoe_rebounds
                 data.each do |player_stats, names|
                     # shoe_sizes = names[:shoe]
                       shoe_sizes << names[:shoe]
-                    
+
                   if (shoe_sizes.max == names[:shoe] )
                       max = names[:rebounds]
-                      
+
                   end
                   end
                 end
               end
             end
-          
+
          max
-          
-          
-          
-       
-            
+
+
+
+
+
     end
