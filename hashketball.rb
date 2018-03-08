@@ -257,26 +257,29 @@ end
 
 
 def big_shoe_rebounds
+  shoe_sizes = []
   team_numbers = []
-  max = 17
+  max = 0
     game_hash.each do |location, team_data|
             team_data.each do |attribute, data|
               if attribute== :players
                 data.each do |player_stats, names|
-
-                  if (names[:shoe] > max )
-                      team_numbers<<names[:rebounds]
-
+                    # shoe_sizes = names[:shoe]
+                      shoe_sizes << names[:shoe]
+                    
+                  if (shoe_sizes.max == names[:shoe] )
+                      max = names[:rebounds]
+                      
                   end
                   end
                 end
               end
             end
-
-         team_numbers.max
-
-
-
-
-
+          
+         max
+          
+          
+          
+       
+            
     end
